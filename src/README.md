@@ -1,2 +1,0 @@
-# greenbuddy
-cs718
