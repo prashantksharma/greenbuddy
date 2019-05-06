@@ -1,1 +1,1 @@
-web: gunicorn greenbuddy.wsgi
+web: gunicorn ecommerce.wsgi
