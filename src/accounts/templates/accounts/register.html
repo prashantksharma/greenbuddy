@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block base_head %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<style>
+  ul {
+list-style-type: none;
+}
+</style>
+<script>
+  var element = document.getElementById("id_full_name");
+  element.classList.add("form-control");
+</script>
+
+{% endblock %}
+
+{% block content %}
+    
+
+    <div class="text-center">
+        <h1>Register</h1>
+    </div>
+
+    <div class='container'>
+        <div class='row'>
+          <div class='col'>
+
+    <div class='col-md-8 col-12 mx-auto'>
+    <form method='POST' class='contact-form' > 
+      <!-- <div class="form-group" > -->
+      {% csrf_token %}
+      {{ form }}
+      <!-- <div cl  ass="text-center"> -->
+          <button type='submit' class='btn btn-primary'>Submit</button>
+      <!-- </div> -->
+      <!-- </div> -->
+    </form>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+  
+
+{% endblock %}

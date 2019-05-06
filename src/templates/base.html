@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <title>Green Buddy</title>
+        {% include 'base/css.html' %}
+        {% block base_head %}{% endblock %}
+
+      <style>
+      body, html{
+        height: 80%;
+      }
+      .carousel,.item,.active{height:100%;}
+      .carousel-inner{height:100%;}
+      </style>
+      <script>
+          var element = document.getElementById("id_full_name");
+          element.classList.add("form-control");
+         // var element = document.getElementsByTagName("INPUT");
+          // element.className = "form-control"
+          // alert("working!!!")
+      </script>
+
+    </head>
+    <body>
+      {% include 'base/navbar.html' with brand_name='eCommerce' %}
+      <div class='container'>
+      {% block content %}{% endblock %}
+    </div>
+
+        {% include 'base/js.html' %}
+        {% block javascript %}
+
+        {% endblock %}
+    </body>
+
+    <script>
+        var element = document.getElementById("id_full_name");
+        element.classList.add("form-control");
+
+        var element = document.getElementById("id_email");
+        element.classList.add("form-control");
+
+        var element = document.getElementById("id_password1");
+        element.classList.add("form-control");
+
+        var element = document.getElementById("id_password2");
+        element.classList.add("form-control");
+        
+        // var element = document.getElementsByTagName("button")[2]
+        // element.classList.add("btn-primary");
+        
+    </script>
+  </html>
